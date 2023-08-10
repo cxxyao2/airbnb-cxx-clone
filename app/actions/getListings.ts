@@ -1,6 +1,4 @@
 import prisma from '@/app/libs/prismadb'
-import { start } from 'repl'
-import { SafeListing } from '@/app/types'
 
 export interface IListingsParams {
 	userId?: string
@@ -41,19 +39,19 @@ export default async function getListings(params: IListingsParams) {
 					some: {
 						OR: [
 							{
-								startDate: {
-									lte: new Date(startDate)
-								},
 								endDate: {
-									gte: new Date(startDate)
+									gte: startDate
+								},
+								startDate: {
+									lte: startDate
 								}
 							},
 							{
 								startDate: {
-									lte: new Date(endDate)
+									lte: endDate
 								},
 								endDate: {
-									gte: new Date(endDate)
+									gte: endDate
 								}
 							}
 						]

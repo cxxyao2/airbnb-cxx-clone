@@ -1,6 +1,4 @@
 import prisma from '@/app/libs/prismadb';
-import { SafeReservation } from '@/app/types';
-import { start } from 'repl';
 
 interface IParams
 {
