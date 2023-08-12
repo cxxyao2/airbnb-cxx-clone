@@ -29,8 +29,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Questions
 
-- ...
-
-## todo
+- database modify in primsa + next
+- difference between 'npx prism db push ' and 'npx prisma migrate db'
 
 - fill in correct info in ImageUpload.tsx
+- folder file name is not page.tsx. is accessible or not on browser?
+- if changing database definition,
+  the saved data will get lost or damaged?
+- how to implement internationalization( i18)
