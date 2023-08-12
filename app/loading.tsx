@@ -1,7 +1,7 @@
-import React from 'react'
+import Loader from "./components/shared/Loader"
 
-const loading = () => {
-	return <div></div>
+const Loading = () => {
+	return <Loader />
 }
 
-export default loading
+export default Loading
