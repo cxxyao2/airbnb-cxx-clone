@@ -17,7 +17,6 @@ import { categories } from '../navbar/Categories'
 import ImageUpload from '../inputs/ImageUpload'
 import Input from '../inputs/Input'
 import Heading from '../shared/Heading'
-import { is } from 'date-fns/locale'
 
 enum STEPS {
 	CATEGORY = 0,

@@ -21,7 +21,6 @@ const Navbar = ({ currentUser }: NavbarProps) => {
 					<div className='flex flex-row items-center justify-between gap-3 md:gap-0'>
 						<Logo />
 						<Search />
-						<Categories />
 						<UserMenu currentUser={currentUser} />
 					</div>
 				</Container>

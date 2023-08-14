@@ -48,7 +48,9 @@ const RegisterModal = () => {
 			.finally(() => setIsLoading(false))
 	}
 
-	const onToggle = useCallback(() => {
+	const onToggle = useCallback(() =>
+	{
+		console.log('Register toggle')
 		registerModal.onClose()
 		loginModal.onOpen()
 	}, [loginModal, registerModal])
@@ -63,15 +65,15 @@ const RegisterModal = () => {
 				register={register}
 				errors={errors}
 				required
-      />
-      <Input
-        id='name'
-        label='Name'
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
+			/>
+			<Input
+				id='name'
+				label='Name'
+				disabled={isLoading}
+				register={register}
+				errors={errors}
+				required
+			/>
 			<Input
 				id='password'
 				label='Password'
@@ -101,11 +103,11 @@ const RegisterModal = () => {
 			/>
 			<div className='text-neutral-500 text-center mt-4 font-light'>
 				<p>
-					First time using Airbnb?{' '}
+					Already have an account?{' '}
 					<span
 						onClick={onToggle}
 						className='text-neutral-800 cursor-pointer hover:underline'>
-						Create an account
+						Log in
 					</span>
 				</p>
 			</div>
@@ -115,10 +117,10 @@ const RegisterModal = () => {
 	return (
 		<Modal
 			disabled={isLoading}
-			isOpen={loginModal.isOpen}
-			title='Login'
+			isOpen={registerModal.isOpen}
+			title='Register'
 			actionLabel='Continue'
-			onClose={loginModal.onClose}
+			onClose={registerModal.onClose}
 			onSubmit={handleSubmit(onSubmit)}
 			body={bodyContent}
 			footer={footerContent}

@@ -10,12 +10,12 @@ const ListingPage = async () => {
 	const listings = await getFavoriteListings()
 	const currentUser = await getCurrentUser()
 
-	if (listings.length === 0) {
+	if (listings?.length === 0) {
 		return (
 			<ClientOnly>
 				<EmptyState
 					title='No Favorites found'
-					subtitle='looks like you have no favorite listings'></EmptyState>
+					subtitle='looks like you have no favorite listings' />
 			</ClientOnly>
 		)
 	}

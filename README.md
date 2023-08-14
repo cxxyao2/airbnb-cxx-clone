@@ -37,3 +37,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - if changing database definition,
   the saved data will get lost or damaged?
 - how to implement internationalization( i18)
+- token. refresh-token.
+
